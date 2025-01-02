@@ -1,0 +1,10 @@
+{
+  "liquidation_contract_address": "0xLiquidationContractAddress",   // Deployed liquidation contract address
+  "aave_pool_address": "0xAavePoolAddress",                        // Aave pool address
+  "compound_comptroller_address": "0xCompoundComptrollerAddress",   // Compound comptroller address
+  "ctoken_collateral_address": "0xCTokenCollateralAddress",         // cToken collateral address
+  "max_gas_limit": 3000000,                                         // Maximum gas limit for liquidation
+  "debt_to_collateral_threshold": 1.5,                              // Debt-to-collateral ratio for liquidation (1.5)
+  "slippage_tolerance": 0.005                                       // Slippage tolerance (0.5%)
+}
+

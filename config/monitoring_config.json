@@ -1,0 +1,11 @@
+{
+  "alert_thresholds": {
+    "high_profit": 1000,   // Alert for trades with profit over $1,000
+    "high_gas_usage": 100  // Alert if gas cost exceeds $100
+  },
+  "notifications": {
+    "email": "your-email@example.com",
+    "sms": "+1234567890"
+  }
+}
+

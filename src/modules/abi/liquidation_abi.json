@@ -1,0 +1,81 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_aavePool",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "debtAsset",
+          "type": "address"
+        }
+      ],
+      "name": "approveTokenOnce",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "borrower",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "debtToCover",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "collateralAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "debtAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "receiveAToken",
+          "type": "bool"
+        }
+      ],
+      "name": "executeLiquidation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawProfits",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}
+

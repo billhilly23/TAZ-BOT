@@ -1,0 +1,9 @@
+{
+  "hft_contract_address": "0xHFTContractAddress",             // Deployed HFT contract address
+  "asset": "0xAssetAddress",                                  // Asset used in HFT
+  "expected_profit": 1000000000000000000,                     // Expected profit (in wei)
+  "gas_fee": 3000000000000000000,                             // Gas fee (in wei)
+  "slippage_tolerance": 0.005,                                // Slippage tolerance (0.5%)
+  "max_gas_limit": 5000000                                    // Maximum gas limit
+}
+

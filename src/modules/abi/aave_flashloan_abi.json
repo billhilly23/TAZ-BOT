@@ -1,0 +1,48 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        { "name": "receiverAddress", "type": "address" },
+        { "name": "assets", "type": "address[]" },
+        { "name": "amounts", "type": "uint256[]" },
+        { "name": "modes", "type": "uint256[]" },
+        { "name": "onBehalfOf", "type": "address" },
+        { "name": "params", "type": "bytes" },
+        { "name": "referralCode", "type": "uint16" }
+      ],
+      "name": "flashLoan",
+      "outputs": [
+        { "name": "", "type": "bool" }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLendingPool",
+      "outputs": [
+        { "name": "", "type": "address" }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getReserveData",
+      "outputs": [
+        { "name": "liquidityRate", "type": "uint256" },
+        { "name": "availableLiquidity", "type": "uint256" },
+        { "name": "totalDebt", "type": "uint256" }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
+

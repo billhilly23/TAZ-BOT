@@ -1,0 +1,36 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address"
+        },
+        {
+          "name": "repayAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "cTokenCollateral",
+          "type": "address"
+        },
+        {
+          "name": "cTokenBorrowed",
+          "type": "address"
+        }
+      ],
+      "name": "liquidateBorrow",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}
+

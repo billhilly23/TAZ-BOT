@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEV Bot Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MEV Bot Control Panel</h1>
+        
+        <!-- Arbitrage Strategy Section -->
+        <section>
+            <h2>Arbitrage Strategy</h2>
+            <form id="arbitrage-form">
+                <label for="arbitrage-contract">Arbitrage Contract Address:</label>
+                <input type="text" id="arbitrage-contract" name="arbitrageContract" placeholder="Enter contract address">
+
+                <label for="arbitrage-slippage">Slippage Tolerance (%):</label>
+                <input type="number" id="arbitrage-slippage" name="arbitrageSlippage" step="0.01" placeholder="Enter slippage tolerance">
+
+                <label for="arbitrage-gas">Max Gas Fee (Gwei):</label>
+                <input type="number" id="arbitrage-gas" name="arbitrageGasFee" placeholder="Enter max gas fee">
+
+                <label for="arbitrage-dynamic-size">Dynamic Trade Size:</label>
+                <input type="number" id="arbitrage-dynamic-size" name="arbitrageTradeSize" placeholder="Enter dynamic trade size">
+
+                <button type="button" onclick="runArbitrage()">Run Arbitrage</button>
+            </form>
+        </section>
+
+        <!-- Flashloan Strategy Section -->
+        <section>
+            <h2>Flashloan Strategy</h2>
+            <form id="flashloan-form">
+                <label for="flashloan-contract">Flashloan Contract Address:</label>
+                <input type="text" id="flashloan-contract" name="flashloanContract" placeholder="Enter contract address">
+
+                <label for="flashloan-amount">Loan Amount:</label>
+                <input type="number" id="flashloan-amount" name="flashloanAmount" placeholder="Enter loan amount">
+
+                <label for="flashloan-gas">Max Gas Fee (Gwei):</label>
+                <input type="number" id="flashloan-gas" name="flashloanGasFee" placeholder="Enter max gas fee">
+
+                <label for="flashloan-dynamic-size">Dynamic Loan Size:</label>
+                <input type="number" id="flashloan-dynamic-size" name="flashloanDynamicSize" placeholder="Enter dynamic loan size">
+
+                <button type="button" onclick="runFlashloan()">Run Flashloan</button>
+            </form>
+        </section>
+
+        <!-- Frontrunning Strategy Section -->
+        <section>
+            <h2>Frontrunning Strategy</h2>
+            <form id="frontrunning-form">
+                <label for="frontrunning-contract">Frontrunning Contract Address:</label>
+                <input type="text" id="frontrunning-contract" name="frontrunningContract" placeholder="Enter contract address">
+
+                <label for="frontrunning-profit">Expected Profit:</label>
+                <input type="number" id="frontrunning-profit" name="frontrunningProfit" placeholder="Enter expected profit">
+
+                <label for="frontrunning-gas">Max Gas Fee (Gwei):</label>
+                <input type="number" id="frontrunning-gas" name="frontrunningGasFee" placeholder="Enter max gas fee">
+
+                <label for="frontrunning-dynamic-size">Dynamic Trade Size:</label>
+                <input type="number" id="frontrunning-dynamic-size" name="frontrunningTradeSize" placeholder="Enter dynamic trade size">
+
+                <button type="button" onclick="runFrontrunning()">Run Frontrunning</button>
+            </form>
+        </section>
+
+        <!-- HFT Strategy Section -->
+        <section>
+            <h2>High-Frequency Trading (HFT) Strategy</h2>
+            <form id="hft-form">
+                <label for="hft-contract">HFT Contract Address:</label>
+                <input type="text" id="hft-contract" name="hftContract" placeholder="Enter contract address">
+
+                <label for="hft-dynamic-size">Dynamic Trade Size:</label>
+                <input type="number" id="hft-dynamic-size" name="hftTradeSize" placeholder="Enter dynamic trade size">
+
+                <label for="hft-gas">Max Gas Fee (Gwei):</label>
+                <input type="number" id="hft-gas" name="hftGasFee" placeholder="Enter max gas fee">
+
+                <button type="button" onclick="runHFT()">Run HFT</button>
+            </form>
+        </section>
+
+        <!-- Liquidation Strategy Section -->
+        <section>
+            <h2>Liquidation Strategy</h2>
+            <form id="liquidation-form">
+                <label for="liquidation-contract">Liquidation Contract Address:</label>
+                <input type="text" id="liquidation-contract" name="liquidationContract" placeholder="Enter contract address">
+
+                <label for="liquidation-debt-ratio">Debt Ratio Threshold:</label>
+                <input type="number" id="liquidation-debt-ratio" name="liquidationDebtRatio" placeholder="Enter debt ratio threshold">
+
+                <label for="liquidation-gas">Max Gas Fee (Gwei):</label>
+                <input type="number" id="liquidation-gas" name="liquidationGasFee" placeholder="Enter max gas fee">
+
+                <button type="button" onclick="runLiquidation()">Run Liquidation</button>
+            </form>
+        </section>
+
+        <!-- Sandwich Attack Strategy Section -->
+        <section>
+            <h2>Sandwich Attack Strategy</h2>
+            <form id="sandwich-form">
+                <label for="sandwich-contract">Sandwich Contract Address:</label>
+                <input type="text" id="sandwich-contract" name="sandwichContract" placeholder="Enter contract address">
+
+                <label for="sandwich-slippage">Slippage Tolerance (%):</label>
+                <input type="number" id="sandwich-slippage" name="sandwichSlippage" step="0.01" placeholder="Enter slippage tolerance">
+
+                <label for="sandwich-gas">Max Gas Fee (Gwei):</label>
+                <input type="number" id="sandwich-gas" name="sandwichGasFee" placeholder="Enter max gas fee">
+
+                <button type="button" onclick="runSandwich()">Run Sandwich Attack</button>
+            </form>
+        </section>
+
+        <!-- Buttons to Execute Strategies -->
+        <div class="execution-buttons">
+            <button id="run-all-strategies" onclick="runMultipleStrategies()">Run All Strategies</button>
+        </div>
+
+        <!-- Status Display -->
+        <div id="status">
+            <h3>Status: <span id="status-message">Ready</span></h3>
+            <h3>Profit: <span id="profit-amount">$0.00</span></h3>
+        </div>
+
+        <script src="/dashboard.js"></script>
+    </div>
+</body>
+</html>
+

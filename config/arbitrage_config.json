@@ -1,0 +1,12 @@
+{
+  "arbitrage_contract_address": "0xArbitrageContractAddress",  // Deployed arbitrage contract address
+  "uniswap_router_address": "0xUniswapRouterAddress",         // Uniswap router address
+  "sushiswap_router_address": "0xSushiswapRouterAddress",      // Sushiswap router address
+  "arbitrage_token_a": "0xTokenAAddress",                      // Token A address (start of arbitrage)
+  "arbitrage_token_b": "0xTokenBAddress",                      // Token B address (intermediate token)
+  "arbitrage_token_c": "0xTokenCAddress",                      // Token C address (end of arbitrage cycle)
+  "max_gas_limit": 5000000,                                    // Maximum gas limit for transactions
+  "min_profit_margin": 0.01,                                   // Minimum profit margin to trigger arbitrage
+  "slippage_tolerance": 0.005                                  // Slippage tolerance (0.5%)
+}
+

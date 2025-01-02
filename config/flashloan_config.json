@@ -1,0 +1,9 @@
+{
+  "flashloan_contract_address": "0xFlashLoanContractAddress",  // Deployed flash loan contract address
+  "lending_pool_address": "0xAaveLendingPoolAddress",          // Aave lending pool address
+  "weth_address": "0xWETHAddress",                             // WETH token address
+  "flashloan_amount": 1000000000000000000,                     // Flash loan amount (in wei, 1 WETH)
+  "max_gas_limit": 3000000,                                    // Maximum gas limit for flash loan
+  "slippage_tolerance": 0.005                                  // Slippage tolerance (0.5%)
+}
+

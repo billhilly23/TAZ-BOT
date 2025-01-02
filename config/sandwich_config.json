@@ -1,0 +1,9 @@
+{
+  "sandwich_contract_address": "0xSandwichContractAddress",    // Deployed sandwich attack contract address
+  "uniswap_router_address": "0xUniswapRouterAddress",          // Uniswap router address
+  "sushiswap_router_address": "0xSushiswapRouterAddress",      // Sushiswap router address
+  "max_gas_limit": 3000000,                                    // Maximum gas limit
+  "min_profit_margin": 0.01,                                   // Minimum profit margin
+  "slippage_tolerance": 0.005                                  // Slippage tolerance (0.5%)
+}
+

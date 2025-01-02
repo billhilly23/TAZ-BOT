@@ -1,0 +1,51 @@
+[package]
+name = "taz"
+version = "0.1.0"
+edition = "2021"
+
+# Project authors
+authors = ["Your Name <your-email@example.com>"]
+
+# Project description
+description = "A MEV bot for executing various DeFi strategies using flash loans, arbitrage, and more."
+license = "MIT"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Web3 library for Ethereum blockchain interaction
+web3 = "0.19.0"
+
+# JSON parsing for config files
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Web server for dashboard
+warp = "0.3"
+
+# Futures for async/await
+futures = "0.3"
+
+# Time-based tasks
+chrono = "0.4"
+
+# HTTP client for REST API calls (if needed for external services)
+reqwest = { version = "0.12.8", features = ["json"] }
+
+# Logging library
+log = "0.4"
+env_logger = "0.11.5"
+
+# Error handling library
+thiserror = "1.0"  # Fixed the typo here
+
+# Email notifications
+lettre = { version = "0.10", default-features = false, features = ["smtp-transport", "tokio1", "builder"] }  # Added builder feature
+
+# SMS via Twilio or other services
+twilio = "1.1.0"
+
+# Optional Database (if needed for storing monitoring/logs or other data)
+sqlx = { version = "0.8.2", features = ["runtime-tokio-native-tls", "postgres"] }
+

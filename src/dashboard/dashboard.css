@@ -1,0 +1,170 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #222;  /* Improved contrast */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
+    font-size: 2.5rem;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Dashboard Container */
+.config-form {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.status, .controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.status p, .controls button {
+    font-size: 1.2rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Adds pointer cursor */
+}
+
+input:focus, select:focus {
+    border-color: #777;
+    outline: none;
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible {
+    outline: 2px solid #4CAF50; /* Better accessibility */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Loader Styling */
+#loader {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loaderText {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Status Box Styling */
+.status {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.status p {
+    margin: 10px 0;
+}
+
+/* Control Buttons Styling */
+.controls button {
+    width: 150px;
+    margin: 10px;
+    background-color: #2196F3;
+}
+
+.controls button:hover {
+    background-color: #1976d2;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .config-form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .config-form, .status {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input, select, button {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+

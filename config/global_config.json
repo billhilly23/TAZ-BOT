@@ -1,0 +1,35 @@
+{
+  "network": "rinkeby",
+  "infura_project_id": "your_infura_project_id",
+  "default_gas_limit": 5000000,
+  "log_level": "info",
+  "bot_mode": "multi",  // Options: "arbitrage", "flashloan", "frontrunning", "liquidation", "sandwich", "hft", "multi", "all"
+  "monitoring_enabled": true,
+  "strategies": {
+    "arbitrage": {
+      "enabled": true,
+      "config_path": "config/arbitrage_config.json"
+    },
+    "flashloan": {
+      "enabled": true,
+      "config_path": "config/flashloan_config.json"
+    },
+    "frontrunning": {
+      "enabled": true,
+      "config_path": "config/front_running_config.json"
+    },
+    "liquidation": {
+      "enabled": true,
+      "config_path": "config/liquidation_config.json"
+    },
+    "sandwich": {
+      "enabled": true,
+      "config_path": "config/sandwich_config.json"
+    },
+    "hft": {
+      "enabled": true,
+      "config_path": "config/hft_config.json"
+    }
+  }
+}
+
